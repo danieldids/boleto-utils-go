@@ -71,12 +71,13 @@ func parseCodigoBarrasCobranca(input CodigoBarras) (*Cobranca, []Error) {
 	}
 
 	return &Cobranca{
-		CodigoBarras: CodigoBarras(input),
-		Moeda:        moeda,
-		Vencimento:   vencimento,
-		Valor:        parseValor(fields.valor),
-		Banco:        parseCodigoBanco(fields.banco),
-		DAC:          string(dv),
+		Banco:          parseCodigoBanco(fields.banco),
+		CodigoBarras:   CodigoBarras(input),
+		DAC:            string(dv),
+		LinhaDigitavel: codigoBarrasToLinhaDigitavelCobranca(input),
+		Moeda:          moeda,
+		Valor:          parseValor(fields.valor),
+		Vencimento:     vencimento,
 	}, nil
 }
 
