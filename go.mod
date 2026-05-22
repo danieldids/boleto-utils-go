@@ -1,3 +1,3 @@
-module github.com/fernandosavio/boleto-utils-go
+module github.com/danieldids/boleto-utils-go
 
-go 1.22.0
+go 1.26.0

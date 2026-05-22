@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/fernandosavio/boleto-utils-go/pkg/boleto"
+	"github.com/danieldids/boleto-utils-go/pkg/boleto"
 )
 
 func TestOnlyNumbersValidation(t *testing.T) {
